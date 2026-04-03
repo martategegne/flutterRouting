@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() =>
+  runApp( const MyApp());
+
 
 final  _router = GoRouter(
   routes: [
