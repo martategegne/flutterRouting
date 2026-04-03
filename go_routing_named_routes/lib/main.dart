@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() =>
+  runApp( const MyApp());
 
-final GoRouter _router = GoRouter(
+
+final _router = GoRouter(
   routes: [
     GoRoute(
       name: 'home',
       path: '/',
-      builder: (context, state) => HomeScreen(),
+      builder: (_,_) => HomeScreen(),
     ),
     GoRoute(
       name: 'details',
       path: '/details',
-      builder: (context, state) => DetailScreen(),
+      builder: (_,_) => DetailScreen(),
     ),
   ],
 );
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(routerConfig: _router);
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +48,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 class DetailScreen extends StatelessWidget {
+  const DetailScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
